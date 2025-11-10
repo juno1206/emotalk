@@ -551,4 +551,18 @@ body {
     .hero-title {
         -webkit-font-smoothing: antialiased;
     }
+
+}
+
+/* 터치 반응성 향상 */
+@media (max-width: 768px) {
+    button, .example {
+        min-height: 44px;
+        padding: 12px 16px;
+    }
+    
+    /* 터치 스크롤 부드럽게 */
+    .hero, .interactive-demo {
+        -webkit-overflow-scrolling: touch;
+    }
 }
