@@ -244,6 +244,14 @@ function explodeMessage() {
     const characters = resultDiv.querySelectorAll('.char-emo');
     
     characters.forEach((char, index) => {
+        const randomX = (Math.random() - 0.5) * 100;
+        const randomY = (Math.random() - 0.5) * 100;
+        const randomRotate = (Math.random() - 0.5) * 360;
+        
+        char.style.setProperty('--tx', `${randomX}px`);
+        char.style.setProperty('--ty', `${randomY}px`);
+        char.style.setProperty('--r', `${randomRotate}deg`);
+        
         char.style.animation = `explode 0.8s forwards`;
         char.style.animationDelay = `${index * 0.05}s`;
         
