@@ -366,7 +366,9 @@ function submitEmail() {
         return;
     }
     
-    // 여기에 실제 이메일 제출 로직 구현
+    // 실제 백엔드 연동 (예: Google Sheets, EmailJS 등)
+    saveEmailToBackend(email);
+    
     showToast('알림 신청이 완료되었습니다!');
     emailInput.value = '';
     
@@ -411,3 +413,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
